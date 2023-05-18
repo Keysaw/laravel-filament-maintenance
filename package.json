@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "devDependencies": {
+    "tailwindcss": "^3.3.2",
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/typography": "^0.5.9",
+    "alpinejs": "^3.12.1",
+    "autoprefixer": "^10.4.14",
+    "axios": "^1.4.0",
+    "lodash": "^4.17.21",
+    "postcss": "^8.4.23",
+    "sass": "^1.62.1",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.8"
+  },
+  "scripts": {
+    "dev": "npm run development",
+    "development": "mix",
+    "prod": "npm run production",
+    "production": "mix --production"
+  }
+}
