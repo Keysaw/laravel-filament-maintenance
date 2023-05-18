@@ -4,5 +4,4 @@ namespace Brickx\LaravelFilamentMaintenance;
 
 class LaravelFilamentMaintenance
 {
-
 }

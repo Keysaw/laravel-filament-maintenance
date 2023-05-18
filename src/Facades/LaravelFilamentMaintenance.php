@@ -6,8 +6,8 @@ use Illuminate\Support\Facades\Facade;
 
 class LaravelFilamentMaintenance extends Facade
 {
-	protected static function getFacadeAccessor() : string
-	{
-		return \Brickx\LaravelFilamentMaintenance\LaravelFilamentMaintenance::class;
-	}
+    protected static function getFacadeAccessor() : string
+    {
+        return \Brickx\LaravelFilamentMaintenance\LaravelFilamentMaintenance::class;
+    }
 }
