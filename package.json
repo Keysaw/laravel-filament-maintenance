@@ -14,9 +14,7 @@
     "vite": "^4.3.8"
   },
   "scripts": {
-    "dev": "npm run development",
-    "development": "mix",
-    "prod": "npm run production",
-    "production": "mix --production"
+    "dev": "vite",
+    "build": "vite build"
   }
 }
