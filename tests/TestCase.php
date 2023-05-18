@@ -1,36 +1,36 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace Brickx\LaravelFilamentMaintenance\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use VendorName\Skeleton\SkeletonServiceProvider;
+use Brickx\LaravelFilamentMaintenance\LaravelFilamentMaintenanceServiceProvider;
 
 class TestCase extends Orchestra
 {
-    protected function setUp(): void
-    {
-        parent::setUp();
+	public function getEnvironmentSetUp($app) : void
+	{
+		config()->set('database.default', 'testing');
 
-        Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'VendorName\\Skeleton\\Database\\Factories\\'.class_basename($modelName).'Factory'
-        );
-    }
+		/*
+		$migration = include __DIR__.'/../database/migrations/create_laravel-filament-maintenance_table.php.stub';
+		$migration->up();
+		*/
+	}
 
-    protected function getPackageProviders($app)
-    {
-        return [
-            SkeletonServiceProvider::class,
-        ];
-    }
+	protected function setUp() : void
+	{
+		parent::setUp();
 
-    public function getEnvironmentSetUp($app)
-    {
-        config()->set('database.default', 'testing');
+		Factory::guessFactoryNamesUsing(
+			fn (string $modelName) => 'Brickx\\LaravelFilamentMaintenance\\Database\\Factories\\'.class_basename($modelName).'Factory'
+		);
+	}
 
-        /*
-        $migration = include __DIR__.'/../database/migrations/create_skeleton_table.php.stub';
-        $migration->up();
-        */
-    }
+	protected function getPackageProviders($app) : array
+	{
+		return [
+			LaravelFilamentMaintenanceServiceProvider::class,
+		];
+	}
 }

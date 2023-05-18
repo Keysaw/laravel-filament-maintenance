@@ -1,47 +1,44 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "brickx/laravel-filament-maintenance",
+    "description": "Simple plugin to toggle maintenance mode from Filament",
     "keywords": [
-        ":vendor_name",
-        "laravel",
-        ":package_slug"
+        "BRICKX",
+        "Laravel",
+        "Filament",
+        "Maintenance"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/brickx/laravel-filament-maintenance",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Florian PLAMONT",
+            "email": "keysaw@brickx.fr",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.1",
-        "spatie/laravel-package-tools": "^1.14.0",
-        "illuminate/contracts": "^10.0"
+        "spatie/laravel-package-tools": "^1.15.0",
+        "illuminate/contracts": "^10.11"
     },
     "require-dev": {
-        "laravel/pint": "^1.0",
+        "laravel/pint": "^1.10",
         "nunomaduro/collision": "^7.9",
-        "nunomaduro/larastan": "^2.0.1",
-        "orchestra/testbench": "^8.0",
-        "pestphp/pest": "^2.0",
-        "pestphp/pest-plugin-arch": "^2.0",
+        "orchestra/testbench": "^8.5",
+        "pestphp/pest": "^2.6",
+        "pestphp/pest-plugin-arch": "^2.1",
         "pestphp/pest-plugin-laravel": "^2.0",
-        "phpstan/extension-installer": "^1.1",
-        "phpstan/phpstan-deprecation-rules": "^1.0",
-        "phpstan/phpstan-phpunit": "^1.0",
-        "spatie/laravel-ray": "^1.26"
+        "spatie/laravel-ray": "^1.32"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "Brickx\\LaravelFilamentMaintenance\\": "src/",
+            "Brickx\\LaravelFilamentMaintenance\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/"
+            "Brickx\\LaravelFilamentMaintenance\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -61,10 +58,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Brickx\\LaravelFilamentMaintenance\\LaravelFilamentMaintenanceServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "LaravelFilamentMaintenance": "Brickx\\LaravelFilamentMaintenance\\Facades\\LaravelFilamentMaintenance"
             }
         }
     },
