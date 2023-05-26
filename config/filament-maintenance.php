@@ -17,4 +17,15 @@ return [
 
 	'secret' => null,
 
+	/*
+	|--------------------------------------------------------------------------
+	| Toggle Button
+	|--------------------------------------------------------------------------
+	| Setting this to true will only display a small icon as a toggle button.
+	| Otherwise, the button will display the maintenance current state.
+	|
+	*/
+
+	'tiny_toggle' => false,
+
 ];
