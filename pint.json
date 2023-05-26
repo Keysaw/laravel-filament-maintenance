@@ -6,18 +6,13 @@
 			"strings_containing_single_quote_chars": true
 		},
 		"indentation_type": false,
+		"statement_indentation": false,
 		"array_indentation": false,
+		"method_chaining_indentation": false,
 		"doctrine_annotation_indentation": false,
 		"phpdoc_separation": true,
-		"class_attributes_separation": {
-			"elements": {
-				"trait_import": "only_if_meta",
-				"const": "only_if_meta",
-				"property": "only_if_meta",
-				"method": "one",
-				"case": "one"
-			}
-		},
+		"class_attributes_separation": false,
+		"blank_line_between_import_groups": true,
 		"phpdoc_align": {
 			"align": "vertical"
 		},
