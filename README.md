@@ -65,6 +65,7 @@ If the `secret` key is set to `null`, a random one will be generated on the fly 
 ## Todo
 
 - [ ] Improve the UX by directly adding the maintenance cookie from the Livewire component (instead of redirecting to the matching URL).
+- [ ] Create proper tests.
 
 ## Changelog
 
