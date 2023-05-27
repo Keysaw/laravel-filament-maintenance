@@ -2,9 +2,14 @@
 
 namespace Brickx\Filament\Maintenance\Tests;
 
+use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
+use BladeUI\Icons\BladeIconsServiceProvider;
 use Brickx\Filament\Maintenance\MaintenanceServiceProvider;
 use Filament\FilamentServiceProvider;
+use Filament\Notifications\NotificationsServiceProvider;
+use Filament\Support\SupportServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Facades\Artisan;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
@@ -14,10 +19,7 @@ class TestCase extends Orchestra
 	{
 		config()->set('database.default', 'testing');
 
-		/*
-		$migration = include __DIR__.'/../database/migrations/create_laravel-filament-maintenance_table.php.stub';
-		$migration->up();
-		*/
+		Artisan::call('up');
 	}
 
 	protected function setUp() : void
@@ -34,7 +36,11 @@ class TestCase extends Orchestra
 		return [
 			LivewireServiceProvider::class,
 			FilamentServiceProvider::class,
+			SupportServiceProvider::class,
 			MaintenanceServiceProvider::class,
+			NotificationsServiceProvider::class,
+			BladeIconsServiceProvider::class,
+			BladeHeroiconsServiceProvider::class,
 		];
 	}
 }

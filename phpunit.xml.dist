@@ -18,9 +18,7 @@
 		</testsuite>
 	</testsuites>
 
-	<coverage>
-		<include>
-			<directory suffix=".php">./src</directory>
-		</include>
-	</coverage>
+	<php>
+		<env name="APP_KEY" value="base64:0bKnqfpLJQCWJG5LkjC8YJu97A+pJPwR/SP9wVF6VKw=" />
+	</php>
 </phpunit>

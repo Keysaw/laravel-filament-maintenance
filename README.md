@@ -52,7 +52,7 @@ This is because Laravel's default maintenance middleware will redirect to the `/
 
 ## Usage
 
-The plugin will add a toggle button to your Filament Admin Panel, between the search bar and the user menu.
+The plugin will add a toggle button to your Filament Admin Panel, right before the search bar.
 
 Clicking it will trigger the `php artisan down` command if the website is live, and the `php artisan up` command otherwise.
 
@@ -65,15 +65,11 @@ If the `secret` key is set to `null`, a random one will be generated on the fly 
 ## Todo
 
 - [ ] Improve the UX by directly adding the maintenance cookie from the Livewire component (instead of redirecting to the matching URL).
-- [ ] Create proper tests.
+- [X] Create proper tests.
 
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security Vulnerabilities
 
