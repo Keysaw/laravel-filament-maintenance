@@ -12,17 +12,17 @@ use Livewire\Component;
 class ToggleMaintenance extends Component
 {
 	public bool $isDown;
+	public string $secret;
 
 	public function mount() : void
 	{
 		$this->isDown = app()->isDownForMaintenance();
+		$this->secret = config('filament-maintenance.secret') ?: Str::random(32);
 	}
 
 	public function toggle() : ?Redirector
 	{
-		$secret = config('filament-maintenance.secret') ?: Str::random(32);
-
-		ToggleMaintenanceJob::dispatch($secret);
+		ToggleMaintenanceJob::dispatch($this->secret);
 
 		$this->isDown = app()->isDownForMaintenance();
 
@@ -31,14 +31,14 @@ class ToggleMaintenance extends Component
 				'status' => $this->isDown ? __('filament-maintenance::general.activated') : __('filament-maintenance::general.deactivated'),
 			]))
 			->body($this->isDown
-				? __('filament-maintenance::general.success.body.down', ['secret' => $secret])
+				? __('filament-maintenance::general.success.body.down', ['secret' => $this->secret])
 				: __('filament-maintenance::general.success.body.up')
 			)
 			->seconds($this->isDown ? 12 : 6)
 			->success()
 			->send();
 
-		return $this->isDown ? redirect($secret) : null;
+		return $this->isDown ? redirect($this->secret) : null;
 	}
 
 	public function render() : View
