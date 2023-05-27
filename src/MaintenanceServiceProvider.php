@@ -27,7 +27,7 @@ class MaintenanceServiceProvider extends PackageServiceProvider
 	public function configurePackage(Package $package) : void
 	{
 		$package->name('laravel-filament-maintenance')
-			->hasConfigFile()
+			->hasConfigFile('filament-maintenance')
 			->hasTranslations()
 			->hasViews('filament-maintenance');
 	}

@@ -16,7 +16,7 @@ composer require brickx/laravel-filament-maintenance
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="laravel-filament-maintenance-config"
+php artisan vendor:publish --tag="filament-maintenance-config"
 ```
 
 This is the contents of the published config file:
@@ -28,10 +28,16 @@ return [
 ];
 ```
 
+You can publish the translations with:
+
+```bash
+php artisan vendor:publish --tag="filament-maintenance-translations"
+```
+
 Optionally, you can publish the views using:
 
 ```bash
-php artisan vendor:publish --tag="laravel-filament-maintenance-views"
+php artisan vendor:publish --tag="filament-maintenance-views"
 ```
 
 ## Setup
