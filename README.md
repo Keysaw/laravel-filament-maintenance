@@ -24,6 +24,7 @@ This is the contents of the published config file:
 ```php
 return [
     'secret' => null,
+    'permissions' => false,
     'tiny_toggle' => false,
 ];
 ```
@@ -66,6 +67,14 @@ Clicking it will trigger the `php artisan down` command if the website is live, 
 You can set a secret token in the config file. If you do so, you will be able to bypass the maintenance mode by visiting the following URL: `https://your-domain.test/{secret}`.
 
 If the `secret` key is set to `null`, a random one will be generated on the fly each time the maintenance mode is activated.
+
+### Visibility
+
+By default, any logged-in user will be able to toggle the maintenance mode.
+
+If you want to restrict maintenance mode toggling to certain users, you can set the `permissions` key in the config file.
+
+The plugin will use Laravel's default authorization system to check for permissions, via the `can` method on the User model. It will also work well with [Spatie's Laravel Permission](https://spatie.be/docs/laravel-permission/v5/introduction) package.
 
 ## Todo
 

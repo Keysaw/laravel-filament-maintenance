@@ -19,6 +19,18 @@ return [
 
 	/*
 	|--------------------------------------------------------------------------
+	| Permissions
+	|--------------------------------------------------------------------------
+	| Only users with the following permissions will be able to toggle the
+	| maintenance mode. If set to false, all authenticated users will be
+	| able to activate or deactivate it.
+	|
+	*/
+
+	'permissions' => false,
+
+	/*
+	|--------------------------------------------------------------------------
 	| Toggle Button
 	|--------------------------------------------------------------------------
 	| Setting this to true will only display a small icon as a toggle button.

@@ -28,8 +28,8 @@ class ToggleMaintenance extends Component
 			return false;
 		}
 
-		if (method_exists($user, 'hasRole')) {
-			return $user->hasRole('super_admin');
+		if ($permissions = config('filament-maintenance.permissions')) {
+			return $user->can($permissions);
 		}
 
 		return true;
