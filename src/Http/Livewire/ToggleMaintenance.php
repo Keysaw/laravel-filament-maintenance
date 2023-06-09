@@ -13,11 +13,26 @@ class ToggleMaintenance extends Component
 {
 	public bool $isDown;
 	public string $secret;
+	public bool $visible;
 
 	public function mount() : void
 	{
 		$this->isDown = app()->isDownForMaintenance();
 		$this->secret = config('filament-maintenance.secret') ?: Str::random(32);
+		$this->visible = $this->getVisibility();
+	}
+
+	public function getVisibility() : bool
+	{
+		if (($user = auth()->user()) === null) {
+			return false;
+		}
+
+		if ($permissions = config('filament-maintenance.permissions')) {
+			return $user->can($permissions);
+		}
+
+		return true;
 	}
 
 	public function toggle() : ?Redirector
