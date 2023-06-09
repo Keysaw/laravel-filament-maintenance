@@ -1,6 +1,6 @@
 <button
-    x-data="{{ json_encode(['visible' => $visible]) }}"
-    x-show="visible"
+	x-data="{{ json_encode(['visible' => $visible]) }}"
+	x-show="visible"
 	type="button"
 	@class([
 		  'flex h-10 items-center justify-center gap-3 rounded-lg px-3 py-2 transition',
