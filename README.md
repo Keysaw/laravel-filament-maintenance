@@ -25,6 +25,7 @@ This is the contents of the published config file:
 return [
     'secret' => null,
     'permissions' => false,
+    'role' => false,
     'tiny_toggle' => false,
 ];
 ```
