@@ -9,7 +9,9 @@ use Filament\FilamentServiceProvider;
 use Filament\Notifications\NotificationsServiceProvider;
 use Filament\Support\SupportServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Gate;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
@@ -25,6 +27,10 @@ class TestCase extends Orchestra
 	protected function setUp() : void
 	{
 		parent::setUp();
+
+		Gate::define('toggle-maintenance', function (User $user) {
+			return $user->id === 1;
+		});
 
 		Factory::guessFactoryNamesUsing(
 			fn (string $modelName) => 'Brickx\\Filament\\Maintenance\\Database\\Factories\\'.class_basename($modelName).'Factory'
