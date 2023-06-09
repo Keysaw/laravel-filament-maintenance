@@ -21,6 +21,9 @@ it('is only visible for authenticated users', function () {
 		->toBeTrue();
 });
 
+it('can be restricted to a specific role')
+	->todo();
+
 it('can be visible only for users with the right permissions', function () {
 	Config::set('filament-maintenance.permissions', 'toggle-maintenance');
 	actingAs($user = new User);

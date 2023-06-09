@@ -32,6 +32,10 @@ class ToggleMaintenance extends Component
 			return $user->can($permissions);
 		}
 
+		if (method_exists($user, 'hasRole') && $role = config('filament-maintenance.role')) {
+			return $user->hasRole($role);
+		}
+
 		return true;
 	}
 
