@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-filament-maintenance` will be documented in this file.
 
+## 1.1.1 - 2023-06-09
+
+Added visibility check using user role.
+
 ## 1.1.0 - 2023-06-09
 
 ### What's Changed
