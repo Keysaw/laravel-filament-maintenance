@@ -9,7 +9,7 @@ class ToggleMaintenanceJob
 {
 	use Dispatchable;
 
-	public function __construct(public ?string $secret = null)
+	public function __construct(public ?string $secret = null, public int|bool $refresh = false)
 	{
 
 	}
@@ -21,6 +21,7 @@ class ToggleMaintenanceJob
 		} else {
 			Artisan::call('down', [
 				'--secret' => $this->secret,
+				'--refresh' => $this->refresh,
 			]);
 		}
 	}

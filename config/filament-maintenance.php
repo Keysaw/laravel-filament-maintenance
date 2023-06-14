@@ -19,6 +19,17 @@ return [
 
 	/*
 	|--------------------------------------------------------------------------
+	| Refresh Interval
+	|--------------------------------------------------------------------------
+	| Specifies the interval (in seconds) at which the page will be refreshed.
+	| If set to false, auto-refresh will be disabled.
+	|
+	*/
+
+	'refresh' => false,
+
+	/*
+	|--------------------------------------------------------------------------
 	| Permissions
 	|--------------------------------------------------------------------------
 	| Only users with the following permissions will be able to toggle the
