@@ -86,8 +86,8 @@ The plugin will use Laravel's default authorization system to check for permissi
 
 ## Todo
 
+- [ ] Fix toggle button styling not properly updating when maintenance mode is disabled.
 - [ ] Improve the UX by directly adding the maintenance cookie from the Livewire component (instead of redirecting to the matching URL).
-- [X] Create proper tests.
 
 ## Changelog
 
