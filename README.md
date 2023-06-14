@@ -24,6 +24,7 @@ This is the contents of the published config file:
 ```php
 return [
     'secret' => null,
+    'refresh' => false,
     'permissions' => false,
     'role' => false,
     'tiny_toggle' => false,
@@ -68,6 +69,12 @@ Clicking it will trigger the `php artisan down` command if the website is live, 
 You can set a secret token in the config file. If you do so, you will be able to bypass the maintenance mode by visiting the following URL: `https://your-domain.test/{secret}`.
 
 If the `secret` key is set to `null`, a random one will be generated on the fly each time the maintenance mode is activated.
+
+### Refresh Interval
+
+If you want to instruct browsers to refresh pages after a certain amount of time, you can set the `refresh` key in the config file.
+
+When set to `false`, no `Refresh` HTTP header will be sent. You can specify an integer to define the number of seconds before reloading pages under maintenance mode.
 
 ### Visibility
 
