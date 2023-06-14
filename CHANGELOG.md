@@ -2,6 +2,14 @@
 
 All notable changes to `laravel-filament-maintenance` will be documented in this file.
 
+## 1.1.2 - 2023-06-14
+
+### What's Changed
+
+- Added refresh option by @Keysaw in https://github.com/Keysaw/laravel-filament-maintenance/pull/6
+
+**Full Changelog**: https://github.com/Keysaw/laravel-filament-maintenance/compare/1.1.1...1.1.2
+
 ## 1.1.1 - 2023-06-09
 
 Added visibility check using user role.
