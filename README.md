@@ -48,6 +48,11 @@ php artisan vendor:publish --tag="filament-maintenance-views"
 An optional step (but **highly recommended**) is to modify the `App\Http\Middleware\PreventRequestsDuringMaintenance` class to add the following code:
 
 ```php
+use Illuminate\Foundation\Http\MaintenanceModeBypassCookie;
+use Illuminate\Http\RedirectResponse;
+
+...
+
 protected function bypassResponse(string $secret) : RedirectResponse
 {
     return redirect('admin')->withCookie(
