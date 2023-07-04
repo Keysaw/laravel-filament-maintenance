@@ -1,7 +1,7 @@
 # Filament Maintenance Plugin
 
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/Keysaw/laravel-filament-maintenance/run-tests.yml?branch=main&label=Tests&logo=GitHub)](https://github.com/Keysaw/laravel-filament-maintenance/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/brickx/laravel-filament-maintenance?label=Packagist&logo=Packagist&logoColor=white)](https://packagist.org/packages/brickx/laravel-filament-maintenance)
+![Packagist Downloads](https://img.shields.io/packagist/dt/brickx/laravel-filament-maintenance?logo=Packagist&logoColor=white&label=Packagist&color=orange&link=https%3A%2F%2Fpackagist.org%2Fpackages%2Fbrickx%2Flaravel-filament-maintenance)
 
 This plugin allows you to easily toggle maintenance mode from your Filament Admin Panel. You can also set a secret token to bypass the maintenance mode.
 
