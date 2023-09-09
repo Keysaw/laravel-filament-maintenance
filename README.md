@@ -5,6 +5,12 @@
 
 This plugin allows you to easily toggle maintenance mode from your Filament Admin Panel. You can also set a secret token to bypass the maintenance mode.
 
+## Requirements
+
+This plugin was developed for Filament v2, and will soon be archived.
+
+If you're using Filament v3, please check out the new repository for the plugin: [brickx/maintenance-switch](https://github.com/Keysaw/maintenance-switch).
+
 ## Installation
 
 You can install the package via composer:
@@ -61,7 +67,7 @@ protected function bypassResponse(string $secret) : RedirectResponse
 }
 ```
 
-This is because Laravel's default maintenance middleware will redirect to the `/` route, which feels weird.
+This is because Laravel's default maintenance middleware will redirect to the `/` route, which feels weird for the user. Of course, you can redirect to any URL you want.
 
 ## Usage
 
