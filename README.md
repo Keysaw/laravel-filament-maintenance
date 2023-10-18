@@ -3,6 +3,13 @@
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/Keysaw/laravel-filament-maintenance/run-tests.yml?branch=main&label=Tests&logo=GitHub)](https://github.com/Keysaw/laravel-filament-maintenance/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![Packagist Downloads](https://img.shields.io/packagist/dt/brickx/laravel-filament-maintenance?logo=Packagist&logoColor=white&label=Packagist&color=orange)](https://packagist.org/packages/brickx/laravel-filament-maintenance)
 
+> ### ⚠️ IMPORTANT
+> This repository will soon be **archived**, as a newer version for **Filament v3** can be found here: [Maintenance Switch](https://github.com/Keysaw/maintenance-switch).
+>
+> I'll try my best to make this newer version compatible with Filament v2 as well, but I can't guarantee when. Feel free to use this soon-to-be-archived version in the meantime.
+
+---
+
 This plugin allows you to easily toggle maintenance mode from your Filament Admin Panel. You can also set a secret token to bypass the maintenance mode.
 
 ## Requirements
