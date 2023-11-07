@@ -4,9 +4,9 @@
 [![Packagist Downloads](https://img.shields.io/packagist/dt/brickx/laravel-filament-maintenance?logo=Packagist&logoColor=white&label=Packagist&color=orange)](https://packagist.org/packages/brickx/laravel-filament-maintenance)
 
 > ### ⚠️ IMPORTANT
-> This repository will soon be **archived**, as a newer version for **Filament v3** can be found here: [Maintenance Switch](https://github.com/Keysaw/maintenance-switch).
+> This repository has been **archived**, as a newer version for **Filament v3** can be found here: [Maintenance Switch](https://github.com/Keysaw/maintenance-switch).
 >
-> I'll try my best to make this newer version compatible with Filament v2 as well, but I can't guarantee when. Feel free to use this soon-to-be-archived version in the meantime.
+> I'll try my best to make this new repository compatible with Filament v2 as well, but I can't guarantee when that will happen. Feel free to use this archived version in the meantime.
 
 ---
 
